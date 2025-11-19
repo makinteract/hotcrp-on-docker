@@ -40,11 +40,11 @@ CREATE TABLE `ActionLog` (
 -- Dumping data for table `ActionLog`
 --
 
-LOCK TABLES `ActionLog` WRITE;
-/*!40000 ALTER TABLE `ActionLog` DISABLE KEYS */;
-INSERT INTO `ActionLog` VALUES (47,1,NULL,NULL,NULL,1763596399,_binary '172.18.0.1',_binary 'Settings edited: opt.contactEmail',NULL);
-/*!40000 ALTER TABLE `ActionLog` ENABLE KEYS */;
-UNLOCK TABLES;
+-- LOCK TABLES `ActionLog` WRITE;
+-- /*!40000 ALTER TABLE `ActionLog` DISABLE KEYS */;
+-- INSERT INTO `ActionLog` VALUES (47,1,NULL,NULL,NULL,1763596399,_binary '172.18.0.1',_binary 'Settings edited: opt.contactEmail',NULL);
+-- /*!40000 ALTER TABLE `ActionLog` ENABLE KEYS */;
+-- UNLOCK TABLES;
 
 --
 -- Table structure for table `Capability`
