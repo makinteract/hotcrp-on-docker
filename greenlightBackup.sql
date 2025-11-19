@@ -33,7 +33,7 @@ CREATE TABLE `ActionLog` (
   `action` varbinary(4096) NOT NULL,
   `data` varbinary(8192) DEFAULT NULL,
   PRIMARY KEY (`logId`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `ActionLog` (
 
 LOCK TABLES `ActionLog` WRITE;
 /*!40000 ALTER TABLE `ActionLog` DISABLE KEYS */;
-INSERT INTO `ActionLog` VALUES (1,1,NULL,NULL,NULL,1763472079,_binary '192.168.65.1',_binary 'Account created',NULL),(2,1,NULL,NULL,NULL,1763472079,_binary '192.168.65.1',_binary 'Account edited: roles [+sysadmin]',NULL),(3,1,NULL,NULL,NULL,1763472084,_binary '192.168.65.1',_binary 'Password reset via hcpw0dfETdAu...',NULL),(4,1,NULL,NULL,NULL,1763472092,_binary '192.168.65.1',_binary 'Account edited: name, affiliation, collaborators',NULL),(5,1,NULL,NULL,NULL,1763472099,_binary '192.168.65.1',_binary 'Settings edited: opt.shortName',NULL);
+INSERT INTO `ActionLog` VALUES (1,1,NULL,NULL,NULL,1763472079,_binary '192.168.65.1',_binary 'Account created',NULL),(2,1,NULL,NULL,NULL,1763472079,_binary '192.168.65.1',_binary 'Account edited: roles [+sysadmin]',NULL),(3,1,NULL,NULL,NULL,1763472084,_binary '192.168.65.1',_binary 'Password reset via hcpw0dfETdAu...',NULL),(4,1,NULL,NULL,NULL,1763472092,_binary '192.168.65.1',_binary 'Account edited: name, affiliation, collaborators',NULL),(5,1,NULL,NULL,NULL,1763472099,_binary '192.168.65.1',_binary 'Settings edited: opt.shortName',NULL),(6,2,NULL,NULL,NULL,1763538571,_binary '192.168.65.1',_binary 'Account created',NULL),(7,1,NULL,NULL,NULL,1763538635,_binary '192.168.65.1',_binary 'Settings edited: opt.shortName, opt.longName',NULL),(8,1,NULL,NULL,NULL,1763538657,_binary '192.168.65.1',_binary 'Account edited: roles [+pc +chair], name, affiliation, country',NULL),(9,1,NULL,NULL,NULL,1763538671,_binary '192.168.65.1',_binary 'Account edited: password',NULL),(10,1,NULL,NULL,NULL,1763538748,_binary '192.168.65.1',_binary 'Settings edited: sub_grace, sub_reg, sub_sub, sub_update',NULL),(11,1,NULL,NULL,NULL,1763538776,_binary '192.168.65.1',_binary 'Settings edited: sub_blind',NULL),(12,1,NULL,NULL,NULL,1763538909,_binary '192.168.65.1',_binary 'Settings edited: sub_pcconf, ioptions',NULL),(13,1,NULL,NULL,NULL,1763539025,_binary '192.168.65.1',_binary 'Settings edited: outcome_map',NULL),(14,1,NULL,NULL,NULL,1763539138,_binary '192.168.65.1',_binary 'Settings edited: msg.home',NULL);
 /*!40000 ALTER TABLE `ActionLog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -80,6 +80,7 @@ CREATE TABLE `Capability` (
 
 LOCK TABLES `Capability` WRITE;
 /*!40000 ALTER TABLE `Capability` DISABLE KEYS */;
+INSERT INTO `Capability` VALUES (1,2,0,0,1763538571,0,0,0,1763797771,_binary 'hcpw0dPxgVrRpBbKTuYonYCqppmfHRmNpzA',NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `Capability` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +149,7 @@ CREATE TABLE `ContactInfo` (
   PRIMARY KEY (`contactId`),
   UNIQUE KEY `email` (`email`),
   KEY `roles` (`roles`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -157,7 +158,7 @@ CREATE TABLE `ContactInfo` (
 
 LOCK TABLES `ContactInfo` WRITE;
 /*!40000 ALTER TABLE `ContactInfo` DISABLE KEYS */;
-INSERT INTO `ContactInfo` VALUES (1,'andrea@kaist.ac.kr',_binary 'a',_binary 'b',_binary 'a b (aa)',_binary 'aa',2,0,NULL,0,NULL,NULL,NULL,_binary ' $$2y$10$bb3ytQ3eZBaIYn7/FI.Ay.WskwEToPkNZcnQD4s1nA82TwMA9s0bK',1763472084,1763472085,_binary 'None',NULL,1763472092,1763472106,2,0,NULL);
+INSERT INTO `ContactInfo` VALUES (1,'andrea@kaist.ac.kr',_binary 'Andrea',_binary 'Bianchi',_binary 'andrea bianchi (kaist)',_binary 'KAIST',7,0,NULL,0,NULL,NULL,_binary 'KR',_binary ' $$2y$10$yAziFPKZi71pOQObI3A/oeZLsMJ/BgK6DxlwXlUQAgrh7VhaT.wDa',1763538671,1763538671,_binary 'None',NULL,1763538657,1763539138,2,0,NULL),(2,'andrea@kaist.ac.k.r','','','','',0,0,NULL,32,NULL,NULL,NULL,_binary ' unset',1763538571,0,NULL,NULL,0,0,2,0,NULL);
 /*!40000 ALTER TABLE `ContactInfo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -927,7 +928,7 @@ CREATE TABLE `Settings` (
 
 LOCK TABLES `Settings` WRITE;
 /*!40000 ALTER TABLE `Settings` DISABLE KEYS */;
-INSERT INTO `Settings` VALUES (_binary '__capability_gc',1763472066,NULL),(_binary 'allowPaperOption',318,NULL),(_binary 'extrev_chairreq',2,NULL),(_binary 'no_papersub',1,NULL),(_binary 'opt.shortName',1,_binary 'test'),(_binary 'pcrev_any',1,NULL),(_binary 'pcrev_soft',0,NULL),(_binary 'sub_pcconf',1,NULL),(_binary 'tag_chair',1,_binary 'accept pcpaper reject'),(_binary 'viewrevid',1,NULL);
+INSERT INTO `Settings` VALUES (_binary '__capability_gc',1763472066,NULL),(_binary 'allowPaperOption',318,NULL),(_binary 'extrev_chairreq',2,NULL),(_binary 'ioptions',1,_binary '[{\"id\":-1000,\"merge\":true,\"name\":\"Thesis Title\",\"title\":\"Thesis Title\"},{\"id\":-1001,\"merge\":true,\"description\":\"Put only the name of the student author.\"}]'),(_binary 'msg.home',1,_binary '<img src=\"https://seoulillustrationfair.co.kr/wp-content/uploads/2023/05/kaist55.jpg\" alt=\"KAIST illustration\" loading=\"lazy\" width=\"300\">'),(_binary 'no_papersub',1,NULL),(_binary 'opt.longName',1,_binary 'ID KAIST GreenLight 2026'),(_binary 'opt.shortName',1,_binary 'GreenLight 2026'),(_binary 'outcome_map',1,_binary '{\"2\":\"Accepted (major revision)\",\"1\":\"Accepted (minor revision)\",\"-1\":\"Rejected\"}'),(_binary 'pcrev_any',1,NULL),(_binary 'pcrev_soft',0,NULL),(_binary 'sub_blind',0,NULL),(_binary 'sub_grace',3600,NULL),(_binary 'sub_reg',1743508799,NULL),(_binary 'sub_sub',1743508799,NULL),(_binary 'sub_update',1743508799,NULL),(_binary 'tag_chair',1,_binary 'accept pcpaper reject'),(_binary 'viewrevid',1,NULL);
 /*!40000 ALTER TABLE `Settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -987,4 +988,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-11-19  7:39:36
+-- Dump completed on 2025-11-19  7:59:40
