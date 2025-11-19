@@ -1,4 +1,4 @@
-# HotCRP on Docker
+# Greenlight HotCRP on Docker
 
 This repository contains scripts and a guide to install docker containers for a hotcrp installation for the KAIST ID GreenLight presentation.
 
@@ -9,7 +9,7 @@ This repository contains scripts and a guide to install docker containers for a 
 1. Clone this repository:
 
 ```
-  git clone https://github.com/makinteract/hotcrp-on-docker
+  git clone https://github.com/makinteract/greenlight-hotcrp-on-docker
   cd hotcrp-on-docker
 ```
 
